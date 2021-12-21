@@ -32,7 +32,7 @@ class Onfido: NSObject {
                    withToken token: String,
                    andApplicantId id: String,
                    andCountryCode countryId: String,
-                   andPrimaryColor primaryColor: String = "#FF9100"
+                   andPrimaryColor primaryColor: String = "#FF9100",
                    resolver resolve: @escaping RCTResponseSenderBlock,
                    rejecter reject: @escaping RCTResponseSenderBlock) {
 
@@ -88,7 +88,7 @@ class Onfido: NSObject {
                      withToken token: String,
                      andApplicantId id: String,
                      andCountryCode countryId: String,
-                     andPrimaryColor primaryColor: String = "#FF9100"
+                     andPrimaryColor primaryColor: String = "#FF9100",
                      resolver resolve: @escaping RCTResponseSenderBlock,
                      rejecter reject: @escaping RCTResponseSenderBlock) {
 
@@ -142,9 +142,9 @@ class Onfido: NSObject {
                      withToken token: String,
                      andApplicantId id: String,
                      andCountryCode countryId: String,
+                     andPrimaryColor primaryColor: String = "#FF9100",
                      resolver resolve: @escaping RCTResponseSenderBlock,
-                     rejecter reject: @escaping RCTResponseSenderBlock,
-                     andPrimaryColor primaryColor: String = "#FF9100") {
+                     rejecter reject: @escaping RCTResponseSenderBlock) {
 
       let appearance = Appearance(
         primaryColor: colorWithHexString(hexString: primaryColor),
