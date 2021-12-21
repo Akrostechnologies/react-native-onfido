@@ -30,6 +30,7 @@ buildscript {
     if (project == rootProject) {
         repositories {
             google()
+            mavenCentral()
             jcenter()
         }
         dependencies {
@@ -76,8 +77,8 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "com.onfido.sdk.capture:onfido-capture-sdk:7.0.0"
-    implementation "com.squareup.okhttp3:logging-interceptor:3.8.0"
-    implementation "com.squareup.okhttp3:okhttp:3.8.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
+    implementation "com.squareup.okhttp3:okhttp:4.9.3"
     implementation "androidx.multidex:multidex:2.0.1"
 }
 

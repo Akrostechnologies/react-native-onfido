@@ -8,8 +8,8 @@ RCT_EXTERN_METHOD(startSDK:
                   token: (NSString *) token
                   applicantId: (NSString *)applicantId
                   countryId: (NSString *)countryId
+                  primaryColor: (NSString *)primaryColor
                   resolver:(RCTResponseSenderBlock *)resolve
                   rejecter:(RCTResponseSenderBlock *)reject
-                  primaryColor: (NSString *)primaryColor
                   )
 @end
