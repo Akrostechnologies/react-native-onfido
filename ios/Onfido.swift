@@ -7,19 +7,19 @@ class Onfido: NSObject {
                       token: String,
                       applicantId: String,
                       countryId: String,
+                      primaryColor: String = "#FF9100",
                       resolver resolve: @escaping RCTResponseSenderBlock,
-                      rejecter reject: @escaping RCTResponseSenderBlock,
-                      primaryColor: String = "#FF9100") -> Void{
+                      rejecter reject: @escaping RCTResponseSenderBlock) -> Void{
     DispatchQueue.main.async {
       switch flowType {
           case "full":
-              self.run(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, resolver: resolve, rejecter: reject, andPrimaryColor: primaryColor)
+              self.run(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, andPrimaryColor: primaryColor, resolver: resolve, rejecter: reject)
           case "selfie":
-              self.runSelfie(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, resolver: resolve, rejecter: reject, andPrimaryColor: primaryColor)
+              self.runSelfie(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, andPrimaryColor: primaryColor, resolver: resolve, rejecter: reject)
           case "document":
-              self.runDocument(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, resolver: resolve, rejecter: reject, andPrimaryColor: primaryColor)
+              self.runDocument(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, andPrimaryColor: primaryColor, resolver: resolve, rejecter: reject)
           default:
-              self.run(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, resolver: resolve, rejecter: reject, andPrimaryColor: primaryColor)
+              self.run(withToken: token,  andApplicantId: applicantId, andCountryCode: countryId, andPrimaryColor: primaryColor, resolver: resolve, rejecter: reject)
       }
     }
   }
@@ -32,9 +32,9 @@ class Onfido: NSObject {
                    withToken token: String,
                    andApplicantId id: String,
                    andCountryCode countryId: String,
+                   andPrimaryColor primaryColor: String = "#FF9100",
                    resolver resolve: @escaping RCTResponseSenderBlock,
-                   rejecter reject: @escaping RCTResponseSenderBlock,
-                   andPrimaryColor primaryColor: String = "#FF9100") {
+                   rejecter reject: @escaping RCTResponseSenderBlock) {
 
     let appearance = Appearance(
       primaryColor: colorWithHexString(hexString: primaryColor),
@@ -88,9 +88,9 @@ class Onfido: NSObject {
                      withToken token: String,
                      andApplicantId id: String,
                      andCountryCode countryId: String,
+                     andPrimaryColor primaryColor: String = "#FF9100",
                      resolver resolve: @escaping RCTResponseSenderBlock,
-                     rejecter reject: @escaping RCTResponseSenderBlock,
-                     andPrimaryColor primaryColor: String = "#FF9100") {
+                     rejecter reject: @escaping RCTResponseSenderBlock) {
 
       let appearance = Appearance(
         primaryColor: colorWithHexString(hexString: primaryColor),
@@ -142,9 +142,9 @@ class Onfido: NSObject {
                      withToken token: String,
                      andApplicantId id: String,
                      andCountryCode countryId: String,
+                     andPrimaryColor primaryColor: String = "#FF9100",
                      resolver resolve: @escaping RCTResponseSenderBlock,
-                     rejecter reject: @escaping RCTResponseSenderBlock,
-                     andPrimaryColor primaryColor: String = "#FF9100") {
+                     rejecter reject: @escaping RCTResponseSenderBlock) {
 
       let appearance = Appearance(
         primaryColor: colorWithHexString(hexString: primaryColor),
